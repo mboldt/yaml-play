@@ -12,6 +12,10 @@ consumer1: *anchor
 consumer2:
   <<: *anchor
   from_consumer2: baz
+
+simple_type_anchor: &simple alpha
+
+simple_type_consumer: *simple
 '''
 
 pyobj = yaml.load(doc)
